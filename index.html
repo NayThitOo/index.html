@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Love ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(#bde9ff, #e8f8ff);
+    color: #355c7d;
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 45px;
+    color: #ff5c8a;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+
+/* Heart Button */
+.heart {
+    font-size: 70px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.floating-heart {
+    position: fixed;
+    font-size: 30px;
+    animation: fly 2s linear forwards;
+}
+
+@keyframes fly {
+    from {
+        transform: translateY(0);
+        opacity:1;
+    }
+    to {
+        transform: translateY(-300px);
+        opacity:0;
+    }
+}
+
+
+/* Gallery */
+.gallery {
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery img {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.gallery img:hover {
+    transform:scale(1.08);
+}
+
+
+/* Note */
+textarea {
+    width:90%;
+    height:150px;
+    border-radius:15px;
+    padding:15px;
+    border:2px solid #bde9ff;
+    font-size:16px;
+}
+
+
+/* Music */
+audio {
+    width:90%;
+}
+
+footer {
+    padding:20px;
+    color:#777;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<header>
+<h1>❤️ My Beautiful Love ❤️</h1>
+<p>A little website made only for you</p>
+
+<div class="heart" onclick="heartClick()">
+❤️
+</div>
+
+<p>Tap the heart ✨</p>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>📸 Our Memories</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🎵 Our Song</h2>
+
+<audio controls>
+<source src="song.mp3" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+
+<p>
+A song that reminds me of you ❤️
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>💌 My Love Note</h2>
+
+<textarea placeholder="Write your love message here...">
+
+My dear love,
+
+You make my days brighter and my heart happier.
+
+Thank you for being part of my life ❤️
+
+Forever yours.
+
+</textarea>
+
+</div>
+
+
+</div>
+
+
+<footer>
+Made with ❤️ for my girlfriend
+</footer>
+
+
+
+<script>
+
+function heartClick(){
+
+let heart=document.createElement("div");
+
+heart.className="floating-heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*window.innerWidth+"px";
+heart.style.bottom="50px";
+
+document.body.appendChild(heart);
+
+
+setTimeout(()=>{
+heart.remove();
+},2000);
+
+}
+
+</script>
+
+
+</body>
+</html>
